@@ -7,8 +7,10 @@ public class ObjectManager : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public GameObject bulletVerticalPrefab;
+    public GameObject bulletBlastPrefab;
     GameObject[] bullet;
     GameObject[] bulletVertical;
+    GameObject[] bulletBlast;
 
     GameObject[] targetPool;
     // Start is called before the first frame update
@@ -16,6 +18,7 @@ public class ObjectManager : MonoBehaviour
     {
         bullet = new GameObject[1000];
         bulletVertical = new GameObject[1000];
+        bulletBlast = new GameObject[100];
 
         Generate();
     }
@@ -33,7 +36,13 @@ public class ObjectManager : MonoBehaviour
         {
             bulletVertical[index] = Instantiate(bulletVerticalPrefab);
             bulletVertical[index].SetActive(false);
-        }     
+        }
+
+        for(int index = 0; index < bulletBlast.Length; index++)
+        {
+            bulletBlast[index] = Instantiate(bulletBlastPrefab);
+            bulletBlast[index].SetActive(false);
+        }       
     }
 
     public GameObject MakeObj(string type)
@@ -46,6 +55,10 @@ public class ObjectManager : MonoBehaviour
 
             case "BulletVertical":
                 targetPool = bulletVertical;
+                break;
+
+            case "BulletBlast":
+                targetPool = bulletBlast;
                 break;
         }
 
@@ -71,6 +84,10 @@ public class ObjectManager : MonoBehaviour
 
             case "BulletVertical":
                 targetPool = bulletVertical;
+                break;
+
+            case "BulletBlast":
+                targetPool = bulletBlast;
                 break;
         }
 

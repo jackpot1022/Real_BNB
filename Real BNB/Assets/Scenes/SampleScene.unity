@@ -285,12 +285,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72f777f156cf6041bcfbd41306ff3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patternIndex: -1
+  patternIndex: 2
   curPatternCount: 0
-  maxPatternCount: 1e00000001000000e803000004000000
+  maxPatternCount: 1e00000005000000e80300000a0000000a000000
   fireVerInterval: 1
   fireArcInterval: 30
   objectManager: {fileID: 740125450}
+  player: {fileID: 394837657}
 --- !u!1 &133279103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,6 +3414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6386275845657698197, guid: eb07830ecfb042d449878ed6bf9ee88d, type: 3}
   bulletVerticalPrefab: {fileID: 6386275845657698197, guid: 6601f254017635d49a1789b1d17f3c73, type: 3}
+  bulletBlastPrefab: {fileID: 6386275845657698197, guid: a2bacc4b79ffd6640a33e75162ab8493, type: 3}
 --- !u!1 &1929124334
 GameObject:
   m_ObjectHideFlags: 0
